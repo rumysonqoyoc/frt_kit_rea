@@ -1,0 +1,25 @@
+.grid-meta > *{
+    box-shadow: 10px 6px 37px -13px #1C1C1C;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.grid-meta{
+    margin-top: 10px;
+    display: grid;
+    gap: 5px;
+    grid-template: 
+    "main" auto
+    "footer" 60px;
+    .main{
+        grid-area:main;
+        background-color: #fdfefe;
+    }
+
+    .footer{
+        grid-area:footer;
+        background-color: #470399;
+        color:#40e5f7;
+        text-align: center;
+    }
+}

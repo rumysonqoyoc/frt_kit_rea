@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid-container > *{
+    /*box-shadow: 1px 6px 10px -3px #545757;*/
+    padding: 10px;
+}
+
+.grid-container{
+    display: grid;
+    /*gap: 5px;*/
+    grid-template: 
+    "header" 60px
+    "navbar" 60px;
+    .header{
+        grid-area: header;
+        background-color: #0794d1;
+        text-align: center;
+    }
+    .navbar{
+        grid-area: navbar;
+        background-color: #085fbc;
+    }
+}
+
+nav{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background: #036bb6;
+    box-shadow: 1px 6px 8px -3px #161616;
+    /*align-items: center;*/
+    /*justify-content:left;*/
+    padding: 5px 1px 10px 20px;
+    /*flex-wrap: wrap;*/
+}
+
+.logo{
+    color:#BDF4F5;
+    font-size: 30px;
+    font-weight: 600;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    /*flex-wrap: wrap;*/
+    list-style: none;
+}
+
+nav ul li{
+    margin: 10px 5px;
+}
+
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 18px 15px;
+}
+
+nav ul li a:hover{
+    background-color: rgb(68, 207, 246);
+    color: black;
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 5px 2px #313232;
+
+}
+
+nav .menu-btn i{
+    color: aliceblue;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+    box-shadow: -1px 1px 6px 3px #181818;
+    border-radius: 50%;
+    background-color: #5b04a2;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.active{
+    background-color: rgb(51, 198, 238);
+    color: black;
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 5px 2px #313232;
+}
+
+@media(max-width:1000px){
+    nav{
+        padding: 0 40px 0 50px;
+    }
+}
+
+@media(max-width:920px){
+    nav .menu-btn i{
+        display: block;
+    }
+
+    #click:checked ~ .menu-btn i::before{
+        content: '\f00d';
+    }
+    nav ul {
+        position: fixed;
+        top: 125px;
+        left: -280px;
+        background:#034688;
+        height: 100vh;
+        width: 280px;
+        box-shadow: 0px 0px 15px 5px #1D1E1D;
+        /*text-align: center;*/
+        display: block;
+        transition: all 0.03s ease;
+    }
+    #click:checked ~ ul{
+        left: 0;
+    }
+    nav ul li{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav ul li a{
+        width: 100%;
+        margin-left: -280px;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55 );
+    }
+
+    #click:checked ~ ul li a{
+        margin-left: 0;
+
+    }
+
+    nav ul li a .active,
+    nav ul li a:hover{
+        background:#95F784 ;
+        color: rgb(15, 15, 15);
+    }
+
+    .active{
+        background: none;
+        color: #010101;
+        background-color: #3fcef5;
+    }
+
+}
+
+
+
+
+
+
+
+
