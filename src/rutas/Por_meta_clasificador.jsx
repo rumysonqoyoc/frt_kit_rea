@@ -13,7 +13,7 @@ import {
 import { Col, Row, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const url='http://localhost/api_kit_php/';
+const url='http://192.168.1.2/api/api_kit_php/';
 let firstPage='<<';
 let lastPage='>>';
 let nextPage='>';
